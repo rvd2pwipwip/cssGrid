@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  background: YellowGreen;
+  margin: 2rem;
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  background: Peru;
+}
+
+.grid {
+  display: grid;
+  grid-template: 200px 100px / repeat(3, 200px);
+  align-content: center;
+  justify-content: center;
+  grid-gap: 1rem;
+}
+
+/* /////     Variants     ///// */
+
+/* Position absolute hack */
+
+.outer-1 {
+  position: relative;
+}
+
+.inner-1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* Flexbox hack */
+
+.outer-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Grid hack */
+
+.outer-3 {
+  display: grid;
+  height: 100%;
+}
+
+.inner-3 {
+  margin: auto;
+}
+
+/* CSS transform hack -unknown width and height- */
+
+.outer-4 {
+  position: relative;
+}
+
+.inner-4 {
+  width: auto;
+  height: auto;
+  background-color: yellowgreen;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Line height hack */
+
+.outer-5 {
+  line-height: 200px;
+  text-align: center;
+}
+
+.inner-5 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Talbe cell hack? investigate why not in grid */
+
+.outer-6 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.inner-6 {
+  display: inline-block;
+}

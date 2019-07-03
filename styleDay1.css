@@ -1,0 +1,38 @@
+/* https://gridbyexample.com/learn/2016/12/01/learning-grid/ */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+}
+
+.grid {
+  display: grid;
+  /* grid-template-rows: 200px 100px; */
+  /* grid-template-columns: repeat(3, 200px); */
+  /* shorthand for grid rows and columns */
+  grid-template: 200px 100px / repeat(3, 200px);
+  /* implicit grid cells formatting: */
+  grid-auto-rows: 100px;
+  align-content: center;
+  justify-content: center;
+  grid-gap: 1rem;
+}
+
+.grid div {
+  background-color: lightgray;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: gray;
+  padding: 0.5rem;
+  display: grid;
+}
+
+.grid div:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+span {
+  margin: auto;
+  text-align: center;
+}
