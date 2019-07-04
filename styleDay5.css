@@ -1,0 +1,43 @@
+/* https://gridbyexample.com/learn/2016/12/02/learning-grid-day2/ */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  /* grid-auto-rows: 100px; */
+  /* align-content: center; */
+  justify-content: center;
+  grid-gap: 1rem;
+  padding-top: 2rem;
+}
+
+.grid2 {
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+.grid div {
+  background-color: lightgray;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: gray;
+  padding: 0.5rem;
+  display: grid;
+}
+
+.grid div:nth-child(even) {
+  background-color: rgba(211, 211, 211, 0.5);
+}
+
+span {
+  text-align: center;
+  margin: auto;
+}
